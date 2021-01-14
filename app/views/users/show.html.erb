@@ -1,0 +1,8 @@
+<div class="info">
+    <strong><%= @current_user.admin ? "ADMIN" : "PROFILE" %></strong> <br><br>
+    <strong>Name:</strong> <p><%= @user.name %></p> <br>
+    <strong>Tickets:</strong> <p><%= @user.tickets %></p><br>
+    <strong>Mood:</strong> <p><%= @user.mood %></p><br>
+    <strong>Height:</strong> <p><%= @user.height %> inches</p><br>
+    <%= link_to "See attractions", attractions_path %>
+</div>

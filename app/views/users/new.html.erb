@@ -1,0 +1,25 @@
+<%= form_with model: @user do |f| %>
+
+    <%= f.label :name %> <br>
+    <%= f.text_field :name %> <br><br>
+
+    <%= f.label 'Height (in inches)' %> <br>
+    <%= f.number_field :height %> <br><br>
+
+    <%= f.label 'How happy are you? (1-5 scale)' %> <br>
+    <%= f.number_field :happiness, in: 1..5 %> <br><br>
+
+    <%= f.label 'How nauseous are you? (1-5 scale)' %> <br>
+    <%= f.number_field :nausea, in: 1..5 %> <br><br>
+
+    <%= f.label 'How many dollars are in your pocket?' %> <br>
+    <%= f.number_field :tickets %> <br><br>
+
+    <%= f.label 'Check box if you are a theme park owner' %>
+    <%= f.check_box :admin, id: "user_admin" %> <br><br>
+
+    <%= f.label :password %>
+    <%= f.text_field :password %> <br><br>
+
+    <%= f.submit %>
+<% end %>

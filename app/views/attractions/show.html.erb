@@ -1,0 +1,12 @@
+
+    <strong>Name:</strong> <p><%= @attraction.name %></p> <br>
+    <strong>Total Number of Users:</strong> <p><%= @attraction.users.size %></p><br>
+    <strong>Ticket Requirement:</strong> <p><%= @attraction.tickets %></p><br>
+    <strong>Height Requirement:</strong> <p><%= @attraction.min_height %> inches</p><br>
+    <strong>Nausea Rating:</strong> <p><%= @attraction.nausea_rating %></p><br>
+    <strong>Happiness Rating:</strong> <p><%= @attraction.happiness_rating %></p><br>
+    <% if @current_user.admin %>
+        <%= link_to 'Edit Attraction', edit_admin_attraction_path(@attraction) %>
+    <% else %>
+        <%= link_to 'Go on Ride', new_ride_path(@attraction) %>
+    <% end %>

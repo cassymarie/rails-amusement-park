@@ -1,0 +1,9 @@
+<%= form_for @user, url: signin_path, method: :post do |f| %>
+    <%= f.hidden_field :admin, class: "user_admin" %>
+    <%= f.label :name %>  <%= f.select :name, User.all.collect { |u| [ u.name, u.name ] }, include_blank: true %> <br><br>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+
+    <%= f.submit 'Sign In' %>
+
+<% end %>
